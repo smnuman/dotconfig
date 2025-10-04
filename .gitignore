@@ -1,0 +1,29 @@
+# -- force NOT to ignore --
+!/plugins/.gitkeep
+! */.gitkeep
+!README.md
+
+# -- folders to ignore/exclude --
+docs/
+save/
+logs/
+raycast/
+gh/
+git/
+glab-cli/
+htop/
+.claude/
+claude/
+bat/
+
+# -- ignore the following --
+plugins/
+Dependent_vars
+.zsh_*
+.zcompdump
+*.log
+*.timestamp
+*.zip
+*.md
+*
+!.gitignore
