@@ -1,8 +1,3 @@
-# -- force NOT to ignore --
-!/plugins/.gitkeep
-! */.gitkeep
-!README.md
-
 # -- folders to ignore/exclude --
 docs/
 save/
@@ -26,6 +21,12 @@ Dependent_vars
 *.zip
 *.md
 *
-!.gitignore
 crossnote
 crossnote/
+
+# -- force NOT to ignore --
+! /plugins/.gitkeep
+! */.gitkeep
+! README.md
+! .gitignore
+!.gitignore
