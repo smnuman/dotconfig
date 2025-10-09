@@ -10,6 +10,7 @@ htop/
 .claude/
 claude/
 bat/
+crossnote/
 
 # -- ignore the following --
 plugins/
@@ -19,14 +20,10 @@ Dependent_vars
 *.log
 *.timestamp
 *.zip
-*.md
-*
-crossnote
-crossnote/
+.DS_Store
+.vscode/
+CLAUDE.md
 
 # -- force NOT to ignore --
-! /plugins/.gitkeep
-! */.gitkeep
-! README.md
-! .gitignore
+!README.md
 !.gitignore
