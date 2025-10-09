@@ -27,3 +27,5 @@ Dependent_vars
 *.md
 *
 !.gitignore
+crossnote
+crossnote/
