@@ -1,0 +1,6 @@
+# --- lf config ---
+set hidden
+set icons
+set previewer ~/.config/lf/preview.sh
+map <enter> open
+map <C-o> shell open .

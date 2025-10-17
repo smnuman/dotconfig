@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+# ~/.config/tmux/scripts/tmux-start
+# Starts a named session and applies a matching layout
+
+SESSION="${1:-nomad}"
+LAYOUT_FILE="$HOME/.config/tmux/layouts/${2:-${1}}_layout.tmux"
+
+# Check if layout file exists
+if [ ! -f "$LAYOUT_FILE" ]; then
+    echo "Warning: Layout file '$LAYOUT_FILE' not found. Using default layout."
+    LAYOUT_FILE=""
+fi
+
+# Create session if it doesn't exist
+if ! tmux has-session -t "$SESSION" 2>/dev/null; then
+    tmux new-session -d -s "$SESSION"
+
+    # Apply layout if available
+    [ -n "$LAYOUT_FILE" ] && tmux source-file "$LAYOUT_FILE"
+fi
+
+# Attach to the session
+tmux attach-session -t "$SESSION"
