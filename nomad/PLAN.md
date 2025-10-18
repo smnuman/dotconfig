@@ -1,8 +1,8 @@
 # 🧭 NOMAD System Master Plan
 
-> **Maintained by:** Numan Syed\
-> **Time Zone:** GMT+6\
-> **Repository:** Private (Encrypted Submodule)\
+> **Maintained by:** Numan Syed  
+> **Time Zone:** GMT+6  
+> **Repository:** Private (Encrypted Submodule)  
 > **Status:** In Progress
 
 ---
@@ -11,7 +11,7 @@
 
 **NOMAD Setup = Minimal + Modular + Portable + Reproducible**
 
-Designed for seamless migration between devices and environments.\
+Designed for seamless migration between devices and environments.  
 All configs live in a unified `~/.config` tree, are version-controlled, and self-documented.
 
 Goals:
@@ -37,7 +37,7 @@ Goals:
 | **6. Workspace Layer**    | Projects & Income streams      | NT8 scripting, web apps, AI automation |
 | **7. Backup + Sync**      | Portability & recovery         | GitHub + GitLab, encrypted backups     |
 | **8. Cloud + Remote**     | Mirror setups                  | VPS, Codespaces, SSH targets           |
-| **9. Aesthetic Layer**    | UI polish                      | LS\_COLORS, prompt, NerdFonts          |
+| **9. Aesthetic Layer**    | UI polish                      | LS_COLORS, prompt, NerdFonts           |
 | **10. Docs + Help**       | Self-documenting system        | Markdown docs, inline help             |
 
 ---
@@ -49,7 +49,9 @@ Goals:
 │
 ├── zsh/
 │   ├── env.zsh
-│   ├── zsh-git-utils/
+│   ├── zsh-aliases
+│   ├── git-utils/
+│   │   └── git-utils.zsh
 │   ├── utils/
 │   ├── lib/
 │   └── prompt/
@@ -81,7 +83,11 @@ Goals:
     └── sync/
 ```
 
-> Note: All existing tools, utilities, and scripts previously developed—both within and outside ChatGPT collaboration—will be incorporated and refined rather than replaced.
+> Note: The actual username used within Git automation functions (e.g. `grepo`, `gsub`, `gsubmod`) is dynamically derived within `zsh/git-utils/git-utils.zsh`, **not** hardcoded. The same file also defines the encryption mechanism using `git-crypt`—to be referenced during encryption setup.
+>
+> Additionally, numerous alias definitions (including advanced `ls` aliases and other productivity shortcuts) are available in `zsh/zsh-aliases`. These will be consulted during phase planning and integration.
+>
+> Future subfolders or refinements will be added progressively as the system evolves.
 
 ---
 
@@ -100,7 +106,7 @@ Goals:
 | **9. Docs + Help System**      | READMEs + help commands                  | 3              |
 | **10. Backup + Sync + Polish** | GitHub/GitLab + themes                   | 4              |
 
-**Total:** \~30 hours over 5 working days.
+**Total:** ~30 hours over 5 working days.
 
 ---
 
@@ -120,6 +126,7 @@ Goals:
 
 - The `~/.config/nomad` folder will be **encrypted** using `git-crypt` for both GitHub and GitLab.
 - Both platforms fully support `git-crypt`; the same GPG keys can be shared for cross-repo access.
+- The encryption setup defined in `zsh/git-utils/git-utils.zsh` will be used as the system standard.
 - Public release will only occur after a full audit and sanitisation.
 
 **Structure:**
@@ -139,10 +146,11 @@ Goals:
 ## 7. Next Steps
 
 1. ✅ Baseline confirmed: macOS Sequoia 15.6, Apple M1, MacBook Air.
-2. 🔐 Encryption confirmed: `git-crypt` to be used for both GitHub and GitLab.
+2. 🔐 Encryption confirmed: `git-crypt` to be used for both GitHub and GitLab (defined in `git-utils.zsh`).
 3. 🧩 Integrate all existing configurations and scripts from prior sources.
 4. 🗂 Create `~/.config/nomad` folder locally.
 5. 🚀 Begin **Phase 1: Foundation Setup** — Zsh + Homebrew integration.
+6. 📘 Review `zsh-aliases` for inclusion in automation and docs.
 
 ---
 
@@ -152,6 +160,7 @@ Goals:
 | ---------- | ----------------------------- | ---------------------------------------- |
 | 2025-10-18 | Initial version created       | Setup roadmap + encryption plan          |
 | 2025-10-18 | System & encryption confirmed | macOS Sequoia + git-crypt for both repos |
+| 2025-10-18 | Repo + alias mapping refined  | git-utils path & alias integration added |
 
 ---
 
