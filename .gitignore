@@ -1,19 +1,23 @@
 # -- folders to ignore/exclude --
+plugins/
+.vscode/
 docs/
 save/
 logs/
 raycast/
+lf/
+nnn/
+.raycast/
 gh/
 git/
 glab-cli/
-htop/
 .claude/
 claude/
+htop/
 bat/
 crossnote/
 
 # -- ignore the following --
-plugins/
 Dependent_vars
 .zsh_*
 .zcompdump
@@ -21,9 +25,10 @@ Dependent_vars
 *.timestamp
 *.zip
 .DS_Store
-.vscode/
 CLAUDE.md
 
 # -- force NOT to ignore --
-!README.md
-!.gitignore
+! README.md
+! .gitignore
+! nnn/
+! .config/nnn/
