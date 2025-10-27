@@ -6,7 +6,6 @@ save/
 logs/
 raycast/
 lf/
-nnn/
 .raycast/
 gh/
 git/
@@ -30,5 +29,4 @@ CLAUDE.md
 # -- force NOT to ignore --
 ! README.md
 ! .gitignore
-! nnn/
 ! .config/nnn/
