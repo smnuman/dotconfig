@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+# 🧠 AI Git Remote Setup Script
+# ==========================================
+#   ONLY TO BE RUN ONCE per repo to
+#   add AI remotes and push main branch
+# ==========================================
+# Add all AI remotes to EVERY repo (main repo + every submodule)
+# This script works whether you're in dotconfig, config-zsh, zsh-prompt, etc.
+
+# for remote in xai openai anthropic google cursor; do
+#     git remote add "$remote" "git@github.com:smnuman/$(basename $(git rev-parse --show-toplevel)).git" 2>/dev/null || true
+# done
+
+# # Push main to all AI remotes once (run this in the main repo AND in every submodule you care about)
+# for remote in xai openai anthropic google cursor; do
+#     git push "$remote" main --tags 2>/dev/null || true
+# done
+
+find ~/.config -type d -name ".git" -exec dirname {} \; | while read repo; do
+    echo "Setting up AI remotes in: $repo"
+    (
+        cd "$repo" || continue
+
+        # Add the five AI remotes (idempotent – safe to run many times)
+        for remote in xai openai anthropic google cursor; do
+            git remote add "$remote" "git@github.com:smnuman/$(basename "$(git rev-parse --show-toplevel)").git" 2>/dev/null || true
+        done
+
+        # Push main + tags to all AI remotes so they exist and are up-to-date
+        for remote in xai openai anthropic google cursor; do
+            git push "$remote" main --tags 2>/dev/null || true
+        done
+
+        echo "Done → $repo"
+    )
+done
+
+echo "All your dotconfig + submodules are now AI-ready!"

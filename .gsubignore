@@ -1,21 +1,16 @@
 # ---
-#   Please add all the folder's that are NOT git submodules
-#   OR do not want them to be a submodule.
-#   Alternatively, edit this file to add/remove folders
-#   that you do/do not want to make a submodule!
+#   This list contains only folders, No files in here!
+#
+#   This file contains all the folder's that are NOT git submodules
+#   OR are not wanted them to be a submodule.                 
+#
+#   Alternatively, edit this file                 
+#     -- to add folders that you do not want to make a submodule! OR                 
+#     -- to remove folders that you do want to make a submodule!
 # ---
-
-# Auto-generated .gsubignore (Not SubModule Candidates)
+                 
+# Auto-generated .gsubignore (i.e., Not SubModule Candidates)
 docs/
 save/
 
 # === === === === User added folders below: === === === ===
-bat/
-claude/
-gh/
-git/
-glab-cli/
-htop/
-raycast/
-vscode/
-crossnote/

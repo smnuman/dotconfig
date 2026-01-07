@@ -1,3 +1,8 @@
-
-**/nomad/**
-nomad
+.git*
+.gitignore
+.gitconfig
+.gitattributes
+.gitcrypt
+.gitmodules
+.gsubignore
+nomad/*

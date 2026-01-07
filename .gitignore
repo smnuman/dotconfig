@@ -3,7 +3,7 @@ plugins/
 .vscode/
 docs/
 save/
-logs/
+logs/*
 raycast/
 lf/
 .raycast/
@@ -18,6 +18,12 @@ crossnote/
 
 # -- ignore the following --
 Dependent_vars
+# .gitattributes
+# .gitconfig
+# .gitcrypt
+# .gitignore
+# .gitmodules
+# .gsubignore
 .zsh_*
 .zcompdump
 *.log
@@ -28,5 +34,25 @@ CLAUDE.md
 
 # -- force NOT to ignore --
 ! README.md
-! .gitignore
 ! .config/nnn/
+! ./logs/.gitkeep
+! */.gitkeep
+! *.md
+
+# ==============================
+
+# Ignore everything except tracked files
+*~
+.promptrc
+
+# Allow submodules to appear in the repo
+!.gitmodules
+
+# Safety: never ignore submodule directories
+!/zsh/
+!/brew/
+
+# Allow .git* inside submodules (needed!)
+!.gitignore
+!.gitattributes
+!.gitkeep
