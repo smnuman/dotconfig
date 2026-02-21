@@ -1,12 +1,15 @@
 # -- folders to ignore/exclude --
 plugins/
 .vscode/
+vscode/
 docs/
 save/
 logs/*
 raycast/
 lf/
 .raycast/
+raycast/
+gcloud/
 gh/
 git/
 glab-cli/
@@ -15,6 +18,12 @@ claude/
 htop/
 bat/
 crossnote/
+opencode/
+nnn/
+nomad/
+yazi/
+
+
 
 # -- ignore the following --
 Dependent_vars
@@ -42,8 +51,8 @@ CLAUDE.md
 # ==============================
 
 # Ignore everything except tracked files
-*~
-.promptrc
+# *~
+# .promptrc
 
 # Allow submodules to appear in the repo
 !.gitmodules

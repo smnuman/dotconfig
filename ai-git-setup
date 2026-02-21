@@ -23,7 +23,7 @@ find ~/.config -type d -name ".git" -exec dirname {} \; | while read repo; do
 
         # Add the five AI remotes (idempotent – safe to run many times)
         for remote in xai openai anthropic google cursor; do
-            git remote add "$remote" "git@github.com:smnuman/$(basename "$(git rev-parse --show-toplevel)").git" 2>/dev/null || true
+            git remote add "$remote" "git@github.com:${GIT_USER}/$(basename "$(git rev-parse --show-toplevel)").git" 2>/dev/null || true
         done
 
         # Push main + tags to all AI remotes so they exist and are up-to-date
@@ -33,6 +33,7 @@ find ~/.config -type d -name ".git" -exec dirname {} \; | while read repo; do
 
         echo "Done → $repo"
     )
+    # echo ".... user = $GIT_USER ...."
 done
 
 echo "All your dotconfig + submodules are now AI-ready!"
