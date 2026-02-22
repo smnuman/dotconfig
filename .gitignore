@@ -30,7 +30,7 @@ agentkit/
 # -- ignore the following --
 Dependent_vars
 # .gitattributes
-# .gitconfig
+.gitconfig
 # .gitcrypt
 # .gitignore
 # .gitmodules
