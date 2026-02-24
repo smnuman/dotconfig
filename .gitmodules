@@ -1,6 +1,8 @@
 [submodule "brew"]
 	path = brew
 	url = git@github.com:smnuman/config-brew.git
+	branch = main
 [submodule "zsh"]
 	path = zsh
 	url = git@github.com:smnuman/config-zsh.git
+	branch = main
