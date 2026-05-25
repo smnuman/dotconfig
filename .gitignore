@@ -1,69 +1,25 @@
-# -- folders to ignore/exclude --
-plugins/
-.vscode/
-vscode/
-docs/
-save/
-logs/*
-raycast/
-lf/
-.raycast/
-raycast/
-gcloud/
-gh/
-git/
-glab-cli/
-.claude/
-claude/
-htop/
-bat/
-crossnote/
-opencode/
-nnn/
-nomad/
-yazi/
-agentkit/
-*.png
-
-
-
-# -- ignore the following --
-Dependent_vars
-# .gitattributes
-.gitconfig
-# .gitcrypt
-# .gitignore
-# .gitmodules
-# .gsubignore
-.zsh_*
-.zcompdump
-*.log
-*.timestamp
-*.zip
-.DS_Store
-CLAUDE.md
-
-# -- force NOT to ignore --
-! README.md
-! .config/nnn/
-! ./logs/.gitkeep
-! */.gitkeep
-! *.md
-
-# ==============================
-
-# Ignore everything except tracked files
-# *~
-# .promptrc
-
-# Allow submodules to appear in the repo
-!.gitmodules
-
-# Safety: never ignore submodule directories
-!/zsh/
+/*
+!/.gitattributes
+!/.gitcrypt
+!/.gitignore
+!/.gitmodules
+!/.gsubignore
+!/.promptrc
+!/ai-git-setup
 !/brew/
+!/CONTEXT.md
+!/docs/
+!/dotfiles-polyrepo-handler.md
+!/eza/
+!/GROK.md
+!/lf/
+!/nomad/
+!/README.md
+!/tmux/
+!/vscode/
+!/warp/
+!/yazi/
+!/zsh/
 
-# Allow .git* inside submodules (needed!)
-!.gitignore
-!.gitattributes
-!.gitkeep
+*.bak *.backup *.pre-bootstrap *-bak *.arc *.archive
+*~ *.swp *.swo *.tmp *.log .DS_Store
