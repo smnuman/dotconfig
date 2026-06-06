@@ -4,7 +4,6 @@
 !/.gitignore
 !/.gitmodules
 !/.gsubignore
-!/.promptrc
 !/ai-git-setup
 !/brew/
 !/CONTEXT.md
@@ -23,3 +22,9 @@
 
 *.bak *.backup *.pre-bootstrap *-bak *.arc *.archive
 *~ *.swp *.swo *.tmp *.log .DS_Store
+
+# Per-machine config files (created/symlinked at install by bootstrap.sh)
+.promptrc
+
+# oh-my-claudecode runtime state (agent replays, HUD cache, session tracking)
+.omc/
