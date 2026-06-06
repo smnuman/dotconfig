@@ -2,7 +2,9 @@
 	path = brew
 	url = git@github.com:smnuman/config-brew.git
 	branch = main
+	update = merge
 [submodule "zsh"]
 	path = zsh
 	url = git@github.com:smnuman/config-zsh.git
 	branch = main
+	update = merge
